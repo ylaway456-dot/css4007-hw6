@@ -1,0 +1,106 @@
+Slippery ice | Fixed policy | Seed 11020
+Outcome: goal | Steps: 14 | Total reward: 1
+
+Step 0
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+Step 1
+(Down)
+SFFF
+[F]HFH
+FFFH
+HFFG
+
+Step 2
+(Down)
+SFFF
+[F]HFH
+FFFH
+HFFG
+
+Step 3
+(Down)
+SFFF
+FHFH
+[F]FFH
+HFFG
+
+Step 4
+(Right)
+SFFF
+FHFH
+F[F]FH
+HFFG
+
+Step 5
+(Down)
+SFFF
+FHFH
+FFFH
+H[F]FG
+
+Step 6
+(Right)
+SFFF
+FHFH
+FFFH
+H[F]FG
+
+Step 7
+(Right)
+SFFF
+FHFH
+F[F]FH
+HFFG
+
+Step 8
+(Down)
+SFFF
+FHFH
+FF[F]H
+HFFG
+
+Step 9
+(Down)
+SFFF
+FHFH
+F[F]FH
+HFFG
+
+Step 10
+(Down)
+SFFF
+FHFH
+FF[F]H
+HFFG
+
+Step 11
+(Down)
+SFFF
+FHFH
+FFFH
+HF[F]G
+
+Step 12
+(Right)
+SFFF
+FHFH
+FF[F]H
+HFFG
+
+Step 13
+(Down)
+SFFF
+FHFH
+FFFH
+HF[F]G
+
+Step 14
+(Right)
+SFFF
+FHFH
+FFFH
+HFF[G]

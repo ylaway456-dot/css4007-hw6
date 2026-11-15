@@ -1,0 +1,22 @@
+Slippery ice | Fixed policy | Seed 11000
+Outcome: hole | Steps: 2 | Total reward: 0
+
+Step 0
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+Step 1
+(Down)
+S[F]FF
+FHFH
+FFFH
+HFFG
+
+Step 2
+(Right)
+SFFF
+F[H]FH
+FFFH
+HFFG
