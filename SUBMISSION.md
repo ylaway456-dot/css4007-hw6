@@ -1,5 +1,5 @@
 # HW6 submission
-
+Timofeyeva Ulyana
 ## AI-use declaration
 
 I used ChatGPT to understand the assignment requirements and to learn how the Python code works. It also helped me write and debug the code.
