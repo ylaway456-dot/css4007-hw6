@@ -1,0 +1,5 @@
+Boundary and wall: stay in mud, reward -3.
+Ice, action up: [(0.8, (0, 2), -1), (0.1, (1, 2), -1), (0.1, (1, 3), -10)]
+The probabilities sum to 1 for every action on ice.
+Entering mud, sand, and water gives -3, -2, and -5.
+Goal entry gives +10. No transitions or rewards after goal or hole.

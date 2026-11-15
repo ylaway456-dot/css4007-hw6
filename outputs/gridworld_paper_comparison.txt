@@ -1,0 +1,11 @@
+V1 — original map
+   -1.00   -1.00   10.00    0.00
+   -1.00       #   -1.00    0.00
+   -1.00   -1.00   -1.00   -1.00
+
+V2 — requested states (row, column)
+V2(1,2) = 8.00
+V2(1,3) = 10.00
+V2(2,3) = 5.21
+
+V1 check — ice (2,3), action down: -1.90

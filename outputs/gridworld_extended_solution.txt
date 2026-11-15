@@ -1,0 +1,13 @@
+Map: extended
+Iterations: 11
+Final change: 2.406e-07
+
+Final values
+    4.20    8.00   10.00    0.00
+    2.78       #    5.82    0.00
+    1.50    2.82    4.24    2.82
+
+Policy (ties: up, right, down, left)
+→  →  →  G
+↑  #  ↑  H
+↑  →  ↑  ←
