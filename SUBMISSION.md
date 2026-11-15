@@ -75,22 +75,65 @@ throughout the runs, so there is no training.
 
 ### Compare code with paper
 
-Show V1 and the requested V2 values. Explain discrepancies.
+The V1 map gives 10 at (1,3) and −1 at every other nonterminal state.
+The requested V2 values are 8.00 at (1,2), 10.00 at (1,3), and 5.21 at (2,3).
+
+For the first update on ice, the action value for Down is
+0.8 × (−1) + 0.1 × (−1) + 0.1 × (−10) = −1.90.
+The best first-round action is Left, so V1(2,3) = −1.00.
+
+[Full V1 map and V2 comparison](outputs/gridworld_paper_comparison.txt)
 
 ### Values, policies and convergence
 
-Link both value/policy maps. Record iteration counts, final value changes and tie-breaking rule.
+| Map | Iterations | Final maximum change | Value at start | First action |
+|---|---:|---:|---:|---|
+| Original | 12 | 2.165e−7 | 1.54 | Right |
+| Extended | 11 | 2.406e−7 | 1.50 | Up |
+
+Both maps converged below 0.000001. For equal action values, I choose
+the first action in this order: up, right, down, left.
+
+- [Original value and policy maps](outputs/gridworld_original_solution.txt)
+- [Extended value and policy maps](outputs/gridworld_extended_solution.txt)
 
 ### Simulation results
 
 | Map | Batch seed | Goals /50 | Holes /50 | Time limits /50 | Mean steps | Mean discounted return |
-| --- | --- | --- | --- | --- | --- | --- |
+|---|---:|---:|---:|---:|---:|---:|
+| Original | 11 | 42 | 8 | 0 | 4.98 | 0.891260 |
+| Original | 22 | 46 | 4 | 0 | 5.04 | 1.914776 |
+| Original | 33 | 48 | 2 | 0 | 5.04 | 2.492144 |
+| Extended | 11 | 50 | 0 | 0 | 5.00 | 1.502000 |
+| Extended | 22 | 50 | 0 | 0 | 5.00 | 1.502000 |
+| Extended | 33 | 50 | 0 | 0 | 5.00 | 1.502000 |
+
+- [All 300 episodes](outputs/gridworld_episodes.csv)
+- [All six batch summaries](outputs/gridworld_batches.csv)
 
 ### Explain your results
 
-Which values/actions changed with sand and water? Where did cost and risk matter? How do simulations relate to the computed values?
+At two decimal places, only the start value changed, from 1.54 to 1.50.
+The only policy arrow that changed was at the start, from Right to Up.
+Entering sand costs −2 instead of −1, so the upper route becomes better
+from the start. Entering water costs −5, which makes the move into the
+bottom-right cell less attractive. The policy already avoided that move.
+
+At the ice cell, both policies choose Up. This action moves toward the
+goal with probability 0.8, stays on the ice with probability 0.1 because
+of the wall, and slips into the hole with probability 0.1. The original
+route from the start reaches the ice. The extended route goes around it,
+and all 150 extended-map episodes end at the goal in five steps.
+
+The value at the start estimates the expected discounted return with
+no fixed step limit. Each batch average comes from 50 sampled episodes
+with a 100-step limit. No episode reached that limit in these runs.
+The original-map batch means vary because the number of falls varies.
+The extended-map route is deterministic, so every run gives 1.502.
 
 ### Rule checks
 
-Show boundary/wall behavior, slip probabilities, floor rewards and terminal handling.
+I checked blocked moves at a wall and a boundary, ice probabilities,
+mud, sand and water rewards, and the end of rewards after a terminal state.
 
+[Saved rule checks](outputs/gridworld_rule_checks.txt)
