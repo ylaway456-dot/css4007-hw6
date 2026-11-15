@@ -6,7 +6,16 @@ Which tools did you use, and for what?
 
 ## Setup and reproduction
 
-Record dependency versions, installation commands and exact run commands.
+### Part B setup
+
+Tested in Google Colab with Python 3.13.18, Gymnasium 1.3.0, and NumPy 2.5.4.
+
+```bash
+python -m venv --without-pip .venv
+python -m pip --python .venv install gymnasium==1.3.0 numpy==2.5.4
+.venv/bin/python part_b_experiment.py
+.venv/bin/python part_b_traces.py
+```
 
 ## Part A — Paper calculations
 
