@@ -2,7 +2,7 @@
 
 ## AI-use declaration
 
-Which tools did you use, and for what?
+I used ChatGPT to understand the assignment requirements and to learn how the Python code works. It also helped me write and debug the code.
 
 ## Setup and reproduction
 
@@ -16,7 +16,18 @@ python -m pip --python .venv install gymnasium==1.3.0 numpy==2.5.4
 .venv/bin/python part_b_experiment.py
 .venv/bin/python part_b_traces.py
 ```
+### Part C setup
 
+Part C uses the Python standard library and the provided `data/maps.json`.
+Run these commands from the repository root.
+
+```bash
+mkdir -p outputs
+python part_c.py | tee outputs/gridworld_rule_checks.txt
+python part_c_solver.py | tee outputs/gridworld_paper_comparison.txt
+python part_c_convergence.py
+python part_c_simulation.py
+```
 ## Part A — Paper calculations
 
 [Part A handwritten calculations](part-a.pdf)
